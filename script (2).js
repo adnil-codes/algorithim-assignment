@@ -6,10 +6,9 @@ Should return => [0,1,2,3,4,5,6,8,10,11,13,16,19,90]*/
 const arr1 = [1, 2, 4, 5, 10, 6, 3];
 const arr2 = [0, 8, 19, 90, 11, 16, 13];
 
-const mergedArray = [...arr1, ...arr2]
+function mergedArray(arr1, arr2){
+    let arr3= [...arr1, ...arr2];
+    return arr3.sort((a,b) => a - b);
+}
 
-console.log(mergedArray);
-
-mergedArray.sort((x,y) => x - y);
-
-console.log(mergedArray);
+console.log(mergedArray(arr1, arr2));
